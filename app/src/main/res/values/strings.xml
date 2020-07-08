@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">WWWord</string>
     <string name="A_know">认识</string>
     <string name="A_vague">模糊</string>
