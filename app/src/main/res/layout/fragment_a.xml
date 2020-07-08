@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+            xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/first_word_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            titlebar:centerType="textView"
+            titlebar:centerTextColor="@color/colorBlack"
+            titlebar:centerText=""
+            titlebar:centerTextSize="20sp"
+            titlebar:statusBarColor="@color/colorFavorBlue"
+            titlebar:titleBarColor="@color/colorFavorBlue"
+            titlebar:fillStatusBar="true"
+            />
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/centerTip"
+                    android:layout_width="wrap_content"
+                    android:text="@string/app_main_tips"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <ScrollView
+                android:id="@+id/all_content"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/main_us_phone"
+                        android:text=""
+                        android:padding="3dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorFavorBlue"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:text="@string/app_main_mean"
+                        style="@style/page1_main"/>
+
+                <TextView
+                        android:id="@+id/main_means"
+                        style="@style/page1_content"/>
+
+                <TextView
+                        android:text="@string/app_main_exam"
+                        style="@style/page1_main"/>
+
+                <TextView
+                        android:id="@+id/main_exam"
+                        style="@style/page1_content"/>
+
+                <TextView
+                        android:text="@string/app_main_likely"
+                        style="@style/page1_main"/>
+
+                <TextView
+                        android:id="@+id/main_likely"
+                        style="@style/page1_content"/>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="80dp">
+
+                    <Button
+                            android:id="@+id/know"
+                            style="@style/AppAButton"
+                            android:text="@string/A_know"
+                            android:background="@drawable/button_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            />
+
+                    <Button
+                            android:id="@+id/uncertain"
+                            style="@style/AppAButton"
+                            android:text="@string/A_vague"
+                            android:background="@drawable/button_radius"
+                            android:backgroundTint="@color/colorDarkOrange"
+                            />
+
+                    <Button
+                            style="@style/AppAButton"
+                            android:id="@+id/unknown"
+                            android:text="@string/A_forget"
+                            android:background="@drawable/button_radius"
+                            android:backgroundTint="@color/colorTomato"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </FrameLayout>
+
+
+</LinearLayout>

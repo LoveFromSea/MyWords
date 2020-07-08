@@ -1,0 +1,105 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppAButton">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="common_vertical_division_line_style">
+        <item name="android:layout_width">1.0dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:background">#dddddd</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="settingTitle">
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="settingNav">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="settingButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:background">#fff</item>
+    </style>
+
+    <style name="settingBtnText">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:weightSum">1</item>
+    </style>
+
+    <style name="settingEdit">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="settingText">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="copyright">
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="page4_dev_line">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="My_CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox">
+        <item name="android:colorControlActivated">@color/colorFavorBlue</item>
+        <item name="android:colorControlNormal">@color/colorGray</item>
+    </style>
+
+    <style name="page1_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorBackGray</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="page1_content">
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+</resources>

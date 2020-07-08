@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".Pages.Select_word">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+            xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/select_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            titlebar:leftType="imageButton"
+            titlebar:leftImageResource="@mipmap/left"
+            titlebar:rightType="textView"
+            titlebar:rightText="@string/app_right"
+            titlebar:rightTextColor="@color/colorFavorBlue"
+            titlebar:titleBarColor="@color/colorWhite"
+            titlebar:fillStatusBar="true"/>
+
+    <ListView
+            android:id="@+id/word_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Pages.AWord">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+            xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/a_word_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            titlebar:leftType="imageButton"
+            titlebar:leftImageResource="@mipmap/left"
+            titlebar:centerType="customView"
+            titlebar:centerCustomView="@layout/title_text"
+            titlebar:centerTextColor="@color/colorFavorBlue"
+            titlebar:centerTextSize="15dp"
+            titlebar:titleBarColor="@color/colorWhite"
+            titlebar:fillStatusBar="true"
+            />
+
+
+    <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/word_head"
+            android:text=""
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"/>
+
+    <TextView
+            android:id="@+id/us_phone"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:layout_marginTop="10dp"
+            android:text="@string/app_main_mean"
+            style="@style/page1_main"/>
+
+    <TextView
+            android:id="@+id/word_mean"
+            style="@style/page1_content"
+            />
+
+    <TextView
+            android:text="@string/app_main_exam"
+            style="@style/page1_main"/>
+
+    <TextView
+            style="@style/page1_content"
+            android:id="@+id/word_sentence"/>
+
+    <TextView
+            android:text="@string/app_main_likely"
+            style="@style/page1_main"/>
+
+    <TextView
+            style="@style/page1_content"
+            android:id="@+id/word_like_word"/>
+</LinearLayout>

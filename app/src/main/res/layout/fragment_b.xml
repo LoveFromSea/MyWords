@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+            xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            titlebar:leftType="textView"
+            titlebar:leftText="@string/app_page2_title"
+            titlebar:leftTextColor="@color/colorWhite"
+            titlebar:leftTextSize="15dp"
+            titlebar:titleBarColor="@color/colorFavorBlue"
+            titlebar:statusBarColor="@color/colorFavorBlue"
+            titlebar:fillStatusBar="true"
+            />
+
+    <EditText
+            android:id="@+id/search_word"
+            android:background="@drawable/edit_radius"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"/>
+
+    <Button
+            android:layout_width="match_parent"
+            android:id="@+id/GotoBook"
+            android:text="选词"
+            android:background="@drawable/button_radius"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBackGray">
+
+            <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+                    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/titlebar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    titlebar:centerType="textView"
+                    titlebar:centerText="@string/app_page4_title"
+                    titlebar:centerTextColor="@color/colorBlack"
+                    titlebar:centerTextSize="15dp"
+                    titlebar:titleBarColor="@color/colorWhite"
+                    titlebar:statusBarColor="@color/colorWhite"
+                    titlebar:fillStatusBar="true"
+                    />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@color/colorFavorBlue"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        >
+
+                    <TextView
+                            android:id="@+id/register"
+                            android:text="@string/app_register"
+                            style="@style/settingNav"
+                            />
+
+                    <LinearLayout style="@style/common_vertical_division_line_style"/>
+
+                    <TextView
+                            android:id="@+id/login"
+                            style="@style/settingNav"
+                            android:text="@string/app_login"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/settingTitle"
+                    android:text="@string/app_setting_title_1">
+            </TextView>
+            <!--            第一个-->
+            <LinearLayout
+                    android:id="@+id/setBtn1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/settingBtnText"
+                            android:text="@string/app_setting_btn1"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/settingBtnText"
+                            android:text="@string/app_setting_backup"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <EditText
+                            android:id="@+id/oneDay"
+                            style="@style/settingEdit"
+                            android:background="@drawable/edit_radius"
+                            android:text="10"
+                            android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <!--第二个-->
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+
+                        android:text="@string/app_setting_btn2"/>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="@string/app_setting_remember"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <!--            第三-->
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn3"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="21:00"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <!--第四-->
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn4"/>
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="@string/app_setting_backup2"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/settingTitle"
+                    android:text="@string/app_setting_title_2">
+            </TextView>
+            <!--            第五-->
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn5"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="2078"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn6"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="2078"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn7"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="0"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn8"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="0"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/settingTitle"
+                    android:text="@string/app_setting_title_3">
+            </TextView>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn9"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text="2078"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn10"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/settingTitle"
+                    android:text="@string/app_setting_title_4">
+            </TextView>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn11"/>
+
+
+                <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingRight="20dp"
+                        >
+
+                    <TextView
+                            style="@style/settingText"
+                            android:background="@drawable/text_radius"
+                            android:backgroundTint="@color/colorFavorBlue"
+                            android:gravity="center"
+                            android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn12"/>
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    style="@style/settingButton"
+                    android:background="@drawable/layout_selector"
+                    android:clickable="true"
+                    >
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/settingBtnText"
+                        android:text="@string/app_setting_btn13"/>
+            </LinearLayout>
+
+            <View
+                    style="@style/page4_dev_line"
+                    />
+            <TextView
+                    android:layout_marginTop="28dp"
+                    style="@style/copyright"
+                    android:text="@string/app_copyright"
+                    >
+            </TextView>
+
+            <TextView
+                    style="@style/copyright"
+                    android:text="@string/app_right_email"
+                    android:layout_marginBottom="10dp"
+                    >
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
