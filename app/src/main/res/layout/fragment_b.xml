@@ -18,41 +18,79 @@
             titlebar:fillStatusBar="true"
             />
 
+
     <LinearLayout
-            android:layout_width="320dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="horizontal">
+
+        <Spinner
+                android:id="@+id/sp_major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/languages"
+                android:spinnerMode="dialog"/>
 
         <EditText
                 android:id="@+id/edit_word"
                 android:background="@drawable/edit_radius"
-                android:layout_width="270dp"
+                android:layout_width="260dp"
                 android:textAlignment="center"
                 android:singleLine="true"
+                android:hint="@string/page2_hind"
                 android:textCursorDrawable="@drawable/color_cursor"
                 android:layout_height="32dp"/>
 
-        <ImageButton
-                android:id="@+id/search_btn"
-                android:background="@color/transparent"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:layout_width="32dp"
-                android:src="@drawable/my_selector"
-                />
+
     </LinearLayout>
 
-    <TextView
-            android:id="@+id/result"
+    <ImageButton
+            android:id="@+id/search_btn"
+            android:background="@color/transparent"
+            android:layout_height="32dp"
+            android:layout_width="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/my_selector"
+            />
+
+    <ScrollView
+            android:layout_marginTop="20dp"
             android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:text=""/>
+            android:layout_gravity="center"
+            android:background="@drawable/page2_text"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="翻译结果"/>
+
+            <TextView
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""/>
+        </LinearLayout>
+
+    </ScrollView>
 
     <Button
-            android:layout_width="match_parent"
+            android:layout_width="400dp"
             android:id="@+id/GotoBook"
             android:text="选词"
+            android:layout_gravity="center"
             android:background="@drawable/button_radius"
             android:layout_height="wrap_content"/>
 

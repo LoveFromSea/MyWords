@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>英-中</item>
+        <item>中-英 </item>
+        <item>西班牙-中</item>
+        <item>日-中</item>
+        <item>俄-中</item>
+    </string-array>
+</resources>

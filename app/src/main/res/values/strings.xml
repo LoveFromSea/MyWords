@@ -40,4 +40,5 @@
     <string name="app_page3_user">尚未登陆，请先登录</string>
     <string name="app_username">用户名：</string>
     <string name="app_pwd">密    码：</string>
+    <string name="page2_hind">请输入要翻译的单词、句子</string>
 </resources>
