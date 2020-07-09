@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import androidx.annotation.Nullable;
+import com.example.words.Bean._learned;
 import com.example.words.Bean._words;
 //import com.example.wwword.Bean._words;
 //import com.example.wwword.MainActivity;
@@ -69,6 +70,7 @@ public class AFragment extends androidx.fragment.app.Fragment {
 //                Log.i("MSG", LitePal.where("word=?", data.get(i)).order("word").find(OneWord.class).get(0).getMeans());
 //            }
 //        }
+
         unCertain = (Button) view.findViewById(R.id.uncertain);
         unKnown = (Button) view.findViewById(R.id.unknown);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
@@ -107,11 +109,20 @@ public class AFragment extends androidx.fragment.app.Fragment {
                 MainActivity.wordCounts--;
                 if (data != null && data.size() != 0) {
                     wordCount++;
+                    _learned learnedWords = new _learned();
                     if (wordCount < data.size()) {
-                        FileInput(data.get(wordCount));
+                        String deleteStr=data.get(wordCount - 1);
+                        learnedWords.setWord(deleteStr);
+                        learnedWords.save();
+                        LitePal.deleteAll(_words.class, "word=?",deleteStr);
                         commonTitleBar.getCenterTextView().setText(data.get(wordCount));
                         scrollView.setVisibility(View.INVISIBLE);
                         relativeLayout.setVisibility(View.VISIBLE);
+                    } else if (wordCount == data.size()) {
+                        String deleteStr=data.get(wordCount - 1);
+                        learnedWords.setWord(data.get(wordCount - 1));
+                        learnedWords.save();
+                        LitePal.deleteAll(_words.class, "word=?",deleteStr);
                     } else {
 //                        Intent intent=new Intent();
                         Toast.makeText(context, "完成了今天的计划", Toast.LENGTH_SHORT).show();
@@ -147,7 +158,6 @@ public class AFragment extends androidx.fragment.app.Fragment {
         FileOutputStream fos = null;
         try {
             fos = getActivity().openFileOutput(FILENAME, Context.MODE_PRIVATE);
-
             fos.write(string.getBytes());
             fos.close();
         } catch (FileNotFoundException e) {
