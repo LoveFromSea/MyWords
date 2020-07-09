@@ -2,6 +2,7 @@ package com.example.words.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +16,16 @@ import com.example.words.Bean._words;
 import com.example.words.R;
 import com.example.words.Bean._words;
 import com.example.words.MainActivity;
+import com.next.easynavigation.utils.NavigationUtil;
+import com.next.easynavigation.view.EasyNavigationBar;
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar;
 import org.litepal.LitePal;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,6 +49,7 @@ public class AFragment extends androidx.fragment.app.Fragment {
     private ScrollView scrollView;
     private Button unCertain;
     private Button unKnown;
+    private EasyNavigationBar easyNavigationBar;
 
     /**
      * 测试一下
@@ -63,6 +69,8 @@ public class AFragment extends androidx.fragment.app.Fragment {
         textCenterMeans = (TextView) view.findViewById(R.id.main_means);
         textCenterSentences = (TextView) view.findViewById(R.id.main_exam);
         textCenterLikely = (TextView) view.findViewById(R.id.main_likely);
+        MainActivity mainActivity = (MainActivity) getActivity();
+        easyNavigationBar = (EasyNavigationBar) mainActivity.findViewById(R.id.navigationBar);
         if (data != null && data.size() != 0)
             commonTitleBar.getCenterTextView().setText(data.get(wordCount));
 //        if (data != null) {
@@ -110,21 +118,28 @@ public class AFragment extends androidx.fragment.app.Fragment {
                 if (data != null && data.size() != 0) {
                     wordCount++;
                     _learned learnedWords = new _learned();
+                    Date date = new Date();
+                    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", java.util.Locale.CHINA);
+                    String result = format.format(date);
+                    Log.i("MSG================================", date.toString());
                     if (wordCount < data.size()) {
-                        String deleteStr=data.get(wordCount - 1);
+                        easyNavigationBar.setMsgPointCount(0, MainActivity.wordCounts);
+                        String deleteStr = data.get(wordCount - 1);
                         learnedWords.setWord(deleteStr);
+                        learnedWords.setLearned_day(result);
                         learnedWords.save();
-                        LitePal.deleteAll(_words.class, "word=?",deleteStr);
+                        LitePal.deleteAll(_words.class, "word=?", deleteStr);
                         commonTitleBar.getCenterTextView().setText(data.get(wordCount));
                         scrollView.setVisibility(View.INVISIBLE);
                         relativeLayout.setVisibility(View.VISIBLE);
                     } else if (wordCount == data.size()) {
-                        String deleteStr=data.get(wordCount - 1);
+                        easyNavigationBar.clearMsgPoint(0);
+                        String deleteStr = data.get(wordCount - 1);
                         learnedWords.setWord(data.get(wordCount - 1));
+                        learnedWords.setLearned_day(result);
                         learnedWords.save();
-                        LitePal.deleteAll(_words.class, "word=?",deleteStr);
+                        LitePal.deleteAll(_words.class, "word=?", deleteStr);
                     } else {
-//                        Intent intent=new Intent();
                         Toast.makeText(context, "完成了今天的计划", Toast.LENGTH_SHORT).show();
                     }
                 }
