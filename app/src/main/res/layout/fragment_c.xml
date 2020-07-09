@@ -4,14 +4,20 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <TextView
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+            xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/titlebar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#20616161"
-            android:gravity="center"
-            android:text="C"
-            android:textColor="#ffffff"
-            android:textSize="100sp"/>
+            android:layout_height="wrap_content"
+            titlebar:leftType="textView"
+            titlebar:leftText="@string/app_page3_title"
+            titlebar:leftTextColor="@color/colorWhite"
+            titlebar:leftTextSize="15dp"
+            titlebar:titleBarColor="@color/colorFavorBlue"
+            titlebar:statusBarColor="@color/colorFavorBlue"
+            titlebar:fillStatusBar="true"
+            />
 
     <ListView
             android:id="@+id/learn_list"

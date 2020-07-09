@@ -33,6 +33,7 @@
     <string name="app_copyright">天外山单词V1.0.0 (200702) RLC</string>
     <string name="app_right_email">2573296154@qq.com Copyright 2020</string>
     <string name="app_page2_title">选词Or查词</string>
+    <string name="app_page3_title">已学习</string>
     <string name="app_page4_title">我的设置</string>
     <string name="app_setting_backup1">同步</string>
     <string name="app_setting_backup2">暂无同步</string>
