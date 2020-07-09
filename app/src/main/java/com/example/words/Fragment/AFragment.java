@@ -17,6 +17,9 @@ import com.example.words.MainActivity;
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar;
 import org.litepal.LitePal;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -105,6 +108,7 @@ public class AFragment extends androidx.fragment.app.Fragment {
                 if (data != null && data.size() != 0) {
                     wordCount++;
                     if (wordCount < data.size()) {
+                        FileInput(data.get(wordCount));
                         commonTitleBar.getCenterTextView().setText(data.get(wordCount));
                         scrollView.setVisibility(View.INVISIBLE);
                         relativeLayout.setVisibility(View.VISIBLE);
@@ -137,4 +141,19 @@ public class AFragment extends androidx.fragment.app.Fragment {
         });
     }
 
+    private void FileInput(String content) {
+        String FILENAME = "my_words.txt";
+        String string = content;
+        FileOutputStream fos = null;
+        try {
+            fos = getActivity().openFileOutput(FILENAME, Context.MODE_PRIVATE);
+
+            fos.write(string.getBytes());
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

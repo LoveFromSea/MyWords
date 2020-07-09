@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.words.R;
 
@@ -25,12 +26,16 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
         setContentView(R.layout.activity_register);
         btnRegister = (Button) findViewById(R.id.btnForRegister);
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Register.this, "登陆了", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "注册了", Toast.LENGTH_SHORT).show();
             }
         });
     }

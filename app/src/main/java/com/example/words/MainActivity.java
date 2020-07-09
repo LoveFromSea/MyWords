@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 双击退出
-     *
      * @param keyCode
      * @param event
      * @return

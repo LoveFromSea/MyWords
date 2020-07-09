@@ -113,7 +113,7 @@ public class Select_word extends AppCompatActivity {
         //模拟创建数据
         for (_words o : listWord) {
             listText.add(o.getWord());
-            Log.i("MSG===============================", o.getWord());
+//            Log.i("MSG===============================", o.getWord());
         }
         adapter = new MyAdapter(listText, this);
         listView.setAdapter(adapter);

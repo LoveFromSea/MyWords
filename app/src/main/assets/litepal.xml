@@ -32,6 +32,7 @@
     -->
     <list>
         <mapping class="com.example.words.Bean._words"/>
+        <mapping class="com.example.words.Bean._learned"/>
         <!--        <mapping class="com.example.wwword.Bean.Account"/>-->
         <!--        <mapping class="com.example.wwword.Bean.LearnedWord"/>-->
     </list>
